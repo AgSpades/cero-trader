@@ -2,3 +2,4 @@ flask
 pyzmq
 gunicorn
 requests
+waitress

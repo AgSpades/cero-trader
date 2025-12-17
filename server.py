@@ -7,7 +7,6 @@ from flask import Flask, request, jsonify
 
 # Configure logging to stdout
 logging.basicConfig(
-    filename='worker.log',
     stream=sys.stdout,
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'

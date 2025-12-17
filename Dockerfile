@@ -1,5 +1,5 @@
 FROM python:3.9-slim
-
+# @todo update the Dockerfile later
 WORKDIR /app
 
 COPY requirements.txt .
