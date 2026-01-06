@@ -77,7 +77,7 @@ input bool InpEnableTrading = true; // Enable Trading By EA
 input group "=== Signal Receiver Settings ===" 
 string InpProtocol = "tcp://"; // Protocol
 input string InpIPAddress = "127.0.0.1";                                      // Server IP address
-input string InpPort = "9090";                                                // Server port number
+input string InpPort = "5050";                                                // Server port number
 input bool InpEnableLogging = true;                                           // Enable detailed logging
 input bool InpShowLatencyStats = false;                                       // Show signal processing latency
 int InpReceiverTimerMs = 1;                                                   // Receiver timer interval in milliseconds (1ms = fastest)
