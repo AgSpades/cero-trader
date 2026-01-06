@@ -43,7 +43,7 @@ A multi-platform trade relayer system designed for MetaTrader 5 and TradingView.
    - Note the generated public URL for use in TradingView alerts.
 5. **Configure TradingView Alerts**:
    - Create a new alert in TradingView.
-   - Set the alert action to "Webhook URL" and enter the Cloudflared URL.
+   - Set the alert action to "Webhook URL" and enter the Cloudflared URL with the `/webhook` endpoint.
    - In the alert message, paste the following JSON template for BUY and SELL signals:
      ```json
      {
@@ -62,7 +62,7 @@ A multi-platform trade relayer system designed for MetaTrader 5 and TradingView.
 Make a CURL request to your Cloudflared URL to ensure the relay server is receiving requests:
 
 ```bash
-curl -X POST <your-cloudflared-url> -H "Content-Type: application/json" -d '{"signal":"BUY","symbol":"EURUSD","price":1.2345,"time":"2024-01-01 12:00:00","interval":"1H","volume":1000}'
+curl -X POST <your-cloudflared-url>/webhook -H "Content-Type: application/json" -d '{"signal":"BUY","symbol":"EURUSD","price":1.2345,"time":"2024-01-01 12:00:00","interval":"1H","volume":1000}'
 ```
 Replace `<your-cloudflared-url>` with your actual Cloudflared URL.
 If everything is set up correctly, you should see the trade being executed in MetaTrader 5.
